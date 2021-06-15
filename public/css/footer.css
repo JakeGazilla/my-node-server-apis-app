@@ -1,0 +1,14 @@
+.footer {
+	display: flex;
+	flex-direction: column-reverse;
+	align-content: flex-start;
+	height: 10%;
+	width: 40%;
+}
+
+.footer h3 {
+	color: #333;
+	text-align: center;
+	padding-top: 10px;
+	border-top: 1px #333 solid;
+}

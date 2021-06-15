@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <title>Home</title>
+</head>
+<body>
+    {{>header}}
+    {{!-- <h1>{{title}}</h1> --}}
+
+    <div class="home-wrapper">
+        <div id='home-content'>
+            <div id="jokes" class='tile grow-tile'>
+                <div class="home-tile ht-one">
+                    <a href="/jokes">
+                        <p>#JOKE</p>
+                    </a>
+                </div>
+            </div>
+            <div id="weather" class='tile grow-tile'>
+                <div class="home-tile ht-two">
+                    <a href="/weather">
+                        <p>#WEATHER</p>
+                    </a>
+                </div>
+            </div>
+            <div id="block3" class='tile grow-tile'>
+                <div class="home-tile ht-three">
+                    <a href="/photo">
+                        <p>#PHOTO</p>
+                    </a>
+                </div>
+            </div>
+            <div id="block4" class='tile grow-tile'>
+                <div class="home-tile ht-four">
+                    <a href="/waifu">
+                        <p>#WAIFU</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        {{>footer}}
+    </div>
+    
+    
+    
+
+    <script src="/js/index.js"></script>
+</body>
+</html>

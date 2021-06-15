@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/photo.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/loader.css">
+    <script src="https://unpkg.com/axios@0.21.1/dist/axios.min.js"></script>
+    <title>Photo</title>
+</head>
+
+<body>
+    {{>header}}
+    <div class="photo-wrapper">
+        <div id='photo-content'>
+            <form>
+                <label for="fname">Theme:</label><br>
+                <input type="text" id="fname" name="fname" placeholder="Type in some theme for the random photo"><br>
+                <button id="send">Send</button>
+            </form>
+            <div id="result"></div>
+        </div>
+        {{>footer}}
+    </div>
+    
+
+    <script src="/js/photo.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+{
+    "name": "web-server",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "nodemon src/server.js -e js,hbs"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "axios": "^0.21.1",
+        "express": "^4.17.1",
+        "hbs": "^4.1.2",
+        "node-fetch": "^2.6.1",
+        "unsplash-js": "^7.0.11"
+    },
+    "prettier": {
+        "trailingComma": "es5",
+        "tabWidth": 4,
+        "semi": false,
+        "singleQuote": true,
+        "overrides": [
+            {
+                "files": "*.hbs",
+                "options": {
+                    "tabWidth": 4,
+                    "semi": false,
+                    "singleQuote": true
+                }
+            }
+        ]
+    }
+}

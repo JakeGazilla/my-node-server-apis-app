@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/waifu.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/loader.css">
+    <script src="https://unpkg.com/axios@0.21.1/dist/axios.min.js"></script>
+    <title>Waifu</title>
+</head>
+
+<body>
+    {{>header}}
+    <div class="waifu-wrapper">
+        <div id='waifu-content'>
+            <form>
+                <label for="fname">Chat:</label><br>
+                <input type="text" id="fname" name="fname" placeholder="Say something to young horny waifu"><br>
+                <button id="send">Send</button>
+            </form>
+            <div id="result"></div>
+        </div>
+        {{>footer}}
+    </div>
+    
+
+    <script src="/js/waifu.js"></script>
+</body>
+
+</html>
