@@ -38,7 +38,7 @@ const partials = path.join(__dirname, '../templates/partials')
 hbs.registerPartials(partials)
 
 // EXPRESS ROUTES
-app.get('', (req, res) => {
+app.get('/', (req, res) => {
     res.render('index', {
         title: 'Home',
         name: 'Jakezilla',
