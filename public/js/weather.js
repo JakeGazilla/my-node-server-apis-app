@@ -27,24 +27,22 @@ const generateWeather = (e) => {
         result.innerHTML = loader
 
         // Fetch the weather
-        axios
-            .get(`http://localhost:3000/weather/fetch?city=${input}`)
-            .then(async (res) => {
-                console.log(res)
-                if (res.error) {
-                    result.innerHTML = `
+        axios.get(`/weather/fetch?city=${input}`).then(async (res) => {
+            console.log(res)
+            if (res.error) {
+                result.innerHTML = `
 					<h2>Something went wrong</h2>
 				`
-                } else {
-                    // sort the data out of object
-                    const conditions = res.data.list[0].weather[0].main
-                    const icon = res.data.list[0].weather[0].icon
-                    const description = res.data.list[0].weather[0].description
-                    const temp = res.data.list[0].main.temp
-                    const pressure = res.data.list[0].main.pressure
-                    const humidity = res.data.list[0].main.humidity
+            } else {
+                // sort the data out of object
+                const conditions = res.data.list[0].weather[0].main
+                const icon = res.data.list[0].weather[0].icon
+                const description = res.data.list[0].weather[0].description
+                const temp = res.data.list[0].main.temp
+                const pressure = res.data.list[0].main.pressure
+                const humidity = res.data.list[0].main.humidity
 
-                    result.innerHTML = `
+                result.innerHTML = `
 					<div class='result-main'>
                         <img src='https://openweathermap.org/img/wn/${icon}@2x.png'/>
                         <h2>${conditions} - ${description}</h2>
@@ -53,8 +51,8 @@ const generateWeather = (e) => {
                         <h3>Humidity: ${humidity} %</h3>
                     </div>
 				`
-                }
-            })
+            }
+        })
     }
 }
 

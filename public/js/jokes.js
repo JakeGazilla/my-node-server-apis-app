@@ -18,7 +18,7 @@ const generateJoke = () => {
     result.innerHTML = loader
 
     // Fetch the joke
-    axios.get(`http://localhost:3000/jokes/fetch`).then(async (res) => {
+    axios.get(`/jokes/fetch`).then(async (res) => {
         console.log(res)
         if (res.error) {
             result.innerHTML = `

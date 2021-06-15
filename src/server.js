@@ -10,6 +10,7 @@ const getP = require('./utils/photo')
 const chatWaifu = require('./utils/waifu')
 
 const app = express()
+const port = process.env.PORT || 3000
 
 // CORS
 app.use((req, res, next) => {
@@ -127,6 +128,6 @@ app.get('/waifu/post', async (req, res) => {
     res.send(data)
 })
 
-app.listen(3000, () => {
-    console.log('Server running on port 3000')
+app.listen(port, () => {
+    console.log(`Server running on port ${port}`)
 })
